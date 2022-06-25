@@ -1,0 +1,169 @@
+/***** RESET *****/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+     --light-green: #628E75;
+     --dark-green: #1A4855;
+
+    font-size: 62.5%;
+}
+
+body {
+   
+background: linear-gradient(270deg, #1A4855 0%, #628E75 100%);
+}
+
+/****** HEADER ****/
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+}
+
+.navegation ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.navegation svg {
+    width: 2rem;
+    height: 2rem;
+   
+}
+
+/****** IMAGE ****/
+.image {
+    display: flex;
+    height: 49vh;
+}
+
+#anime {
+       animation: fly 6s infinite;
+       width: 100vw;
+}
+
+#anime .mouth {
+    animation: speak .5s infinite;
+}
+
+@keyframes speak {
+    from {
+        height: .5rem;
+    }
+
+    50% {
+        height: .8rem;
+    }
+    100% {
+        height: .5;
+    }
+}
+
+@keyframes fly {
+    from {
+        transform: translateY(3rem);
+    }
+    50% {
+        transform: translatey(0rem);
+    }
+    100% {
+        transform: translateY(3rem);
+    }
+}
+
+/******* INFO ******/
+
+#info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 87vh;
+    margin: 1rem;
+    color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+#info h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+#info h1 {
+    
+    font-weight: 900;
+    font-size: 3.7rem;
+    text-transform: uppercase;
+}
+
+#info p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+main .info {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 97vw;
+}
+
+.trailer {
+    visibility: hidden;
+}
+
+
+
+@media screen and (min-width: 700px) {
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+    #info {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    #info .image {
+        display: flex;
+        height: 49vh;
+        align-items: self-end;
+    }
+
+    #info #anime {
+         width: 41vw;
+    }
+
+    #info .info {
+        width: 49vw;
+    }
+
+    .trailer,
+    .movie {
+        visibility: visible;
+        cursor: pointer; 
+    }
+}
+
+
+
+   
+
+
+
